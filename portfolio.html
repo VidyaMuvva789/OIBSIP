@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonalPortfolio</title>
+    <style>
+        #homeicon{
+           background-image: url(https://img.freepik.com/free-photo/abstract-background-with-ink_1112-820.jpg);
+           background-size: 1340px 630px;
+           width: 100%;
+           height: 630px;
+        }
+        #homeicon{
+            display: flex;
+            flex-direction: column;
+        }
+        .nav{
+            margin-left: 350px;
+            position: fixed;
+        }
+        .nav ul{
+            float: right;
+            display: flex;
+            flex-direction: row;
+        }
+        .nav li{
+            list-style: none;
+        }
+        .nav a{
+            text-decoration:none;
+            text-transform: uppercase;
+            padding: 12px 25px;
+            color:black;
+            font-size: 18px;
+        }
+        .nav a:hover{
+            color: white;
+            background-color: blueviolet;
+            
+        }
+        #me{
+            color: white;
+            background-color: blueviolet;
+        }
+        .home{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            align-items: center;
+            width:80%;
+            margin: auto;
+
+        }
+        .home pre{
+            color:black;
+            font-size: 50px;
+            font-family: serif;
+            margin-left: 150px;
+            font-weight: bold;
+        }
+        .home pre span{
+        color: blueviolet;
+
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .home img{
+            border-radius: 50px;
+            width: 370px;
+            height: 300px;
+            box-shadow: 5px 5px 25px blueviolet;
+        }
+        .home img:hover{
+            width:400px;
+            height: 350px;
+        }
+        #abouticon{
+            background-image: url("https://img.freepik.com/premium-vector/edge-border-purple-watercolor-background-abstract-watercolour-paint-brush-texture-ink-vector-frame-purple-watercolor-pattern-brush-stroke-border-background_548264-462.jpg?w=2000");
+            background-repeat: no-repeat;
+            background-size: 1340px 630px;
+            width: 100%;
+            height: 630px;
+        }
+        .about{
+            display: flex;
+            flex-direction: row;
+        }
+        .about h1{
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+        .about img{
+            width: 240px;
+            height: 230px;
+            border-radius: 120px;
+            margin-top: 200px;
+            justify-content: center;
+            box-shadow: 5px 5px 30px blueviolet;
+        }
+        .about pre{
+            margin-top: 250px;
+            font-size: 20px;
+            line-height: 25px;
+        }
+        #projects{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6sK98U-I9ceGA2bdHUVoS5TBv6jZnmgrMUGlPjBcDWsDfvdFCHmN8pyBnCthKVy8dU6Q&usqp=CAU");
+            background-repeat: no-repeat;
+            background-size: 1340px 630px;
+            width: 1340px;
+            height: 630px;
+        }
+        .p1 h1{
+           margin:0px;
+        }
+        .p1{
+            width:90%;
+            margin: auto;
+        }
+        .p1 img{
+            margin-top: 100px;
+            padding: 8px;
+        }
+        .p2{
+            width:78%;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #skills{
+            background-image: url("https://img.freepik.com/premium-photo/purple-sky-white-cloud-background_570543-6658.jpg");
+            background-repeat: no-repeat;
+            background-size: 1340px 630px;
+            width: 100%;
+            height: 630px;
+        }
+        .skill h1{
+             margin-left: 20px;
+             margin-top: 0px;
+        }
+        .skill h3{
+           margin-left: 20px;
+        }
+        .container{
+            width:80%;
+            height:15px;
+            border:1px solid #000;
+            border-radius: 5px;
+            margin-left:20px;
+            margin-top: 50px;
+        }
+        .frontend{
+            width:75%;
+            height:100%;
+            border-radius: 5px;
+            background-color: blueviolet;
+        }
+        .c{
+            width:85%;
+            height:100%;
+            border-radius: 5px;
+            background-color: blueviolet;
+        }
+        .java{
+            width:75%;
+            height:100%;
+            border-radius: 5px;
+            background-color: blueviolet;
+        }
+        .python{
+            width:80%;
+            height:100%;
+            border-radius: 5px;
+            background-color: blueviolet;
+        }
+        .contactme table{
+            line-height: 3;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <section id="homeicon">
+        <div class="nav">
+            <ul>
+                <li><a href="#homeicon">home</a></li>
+                <li><a href="#abouticon">about</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a id="me" href="#contact">contact</a></li>
+            </ul>
+            <hr>
+        </div>
+        <div class="home">
+            <img src="https://img.freepik.com/premium-photo/business-finance-employment-female-successful-entrepreneurs-concept-smiling-professional-businesswoman-real-estate-broker-showing-clients-good-deal-carry-laptop-hand_1258-59119.jpg">      
+        <pre>I'm<span> Muvva Vidya</span>
+  a web developer.
+            </pre>
+        </div>        
+    </section>
+    <section id="abouticon">
+        <div class="about">
+            <h1><u>About</u></h1>
+            <img src="https://img.freepik.com/premium-photo/business-finance-employment-female-successful-entrepreneurs-concept-confident-nice-smiling-asian-businesswoman-cross-arms-chest-confident-ready-meeting-with-financial-partners_1258-58833.jpg?w=2000">
+        <pre>
+        I am Vidya pursuing my B.Tech 3rd year in the branch of CSE in 
+        VVIT(Vasireddy Venkatadri Institute Of Technology).I am an enthusiastic
+        learner.I always show my intrest in learning new technologies and
+        currently working as a web developer intern in Oasis Infobyte.
+        </pre>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="p1">
+            <h1><u>Projects</u></h1>
+            <img src="https://img.gamepix.com/games/impossible-tic-tac-toe/icon/impossible-tic-tac-toe.png" width="300px" height="300px">
+            <img src="https://images01.nicepagecdn.com/page/52/36/website-template-preview-52365.jpg" width="450px" height="300px">
+            <img src="https://repository-images.githubusercontent.com/615612903/0992f550-ba45-4f7c-b7b9-9ca62df519df" width="400px" height="300px">
+        </div>
+        <div class="p2">
+            <h3>Tic-Tac-Toe</h3>
+            <h3>Landing Page</h3>
+            <h3>Number Guessing Game</h3>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="skill">
+            <h1><u>Skills</u></h1>
+            <h3>Frontend-75%</h3>
+            <div class="container">
+                <div class="frontend"></div>
+            </div>
+            <h3>c-language 85%</h3>
+            <div class="container">
+                <div class="c"></div>
+            </div>
+            <h3>Java-75%</h3>
+            <div class="container">
+                <div class="java"></div>
+            </div>
+            <h3>python-80%</h3>
+            <div class="container">
+                <div class="python"></div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contactme">
+            <center><h1><u>contact</u></h1>
+            <table>
+                <tr>
+                    <td colspan="2">Email:abcd@gmail.com</td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.linkedin.com"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png" width="30px" height="30px"></a></td>
+                    <td><a href="https://github.com"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg" width="30px" height="30px"></a></td>
+                </tr>
+            </table>
+            </center>
+        </div>
+    </section>
+    </main>
+</body>
+</html>
