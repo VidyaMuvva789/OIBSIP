@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        body{
+            /*background-color: #dc143c;*/
+            background-image:url("https://media.istockphoto.com/id/1217507110/photo/hot-summer-or-heat-wave-background.jpg?s=612x612&w=0&k=20&c=JeNJBv26e0O1sTMPynNuxA9IjVmHC7fYa_qwh7XMLCA=");
+            background-repeat: no-repeat;
+            background-size:1350px 680px;
+            font-family: serif;
+            display: flex;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 200px;
+            margin-left: 250px;
+        }
+        .container h2{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        input,select{
+            padding: 10px;
+            font-size: 18px;
+            margin-bottom: 8px;
+            width: 150px;
+            border:1px solid #fff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Temperature Converter</h2>
+        <div class="temp">
+            <input type="text">
+            <select>
+                <option selected>Celcius</option>
+                <option>Fahrenheit</option>
+                <option>Kelvin</option>
+            </select>
+        </div>
+        <div class="result">
+            <input type="text">
+            <select>
+                <option>Celcius</option>
+                <option selected>Fahrenheit</option>
+                <option>Kelvin</option>
+            </select>
+        </div>
+    </div>
+    <script>
+        const temp=document.querySelector(".temp input");
+        const result=document.querySelector(".result input");
+        const inputUnit=document.querySelector(".temp select");
+        const resultunit=document.querySelector(".result select");
+
+        temp.oninput=function(){
+            let inputValue=inputUnit.value;
+            let resultValue=resultunit.value;
+            let ctof=inputValue==="Celcius" && resultValue==="Fahrenheit";
+            let ctok=inputValue==="Celcius" && resultValue==="Kelvin";
+            let ftoc=inputValue==="Fahrenheit" && resultValue==="Celcius";
+            let ftok=inputValue==="Fahrenheit" && resultValue==="Kelvin";
+            let ktoc=inputValue==="Kelvin" && resultValue==="Celcius";
+            let ktof=inputValue==="Kelvin" && resultValue==="Fahrenheit";
+            let sameUnits=inputValue === resultValue;
+            let inputTempValue=temp.value;
+            let convertTemp=0;
+            if(ctof){
+                convertTemp=(9/5 *inputTempValue) + 32;
+                result.value=convertTemp.toFixed(2);
+            }
+            else if(ctok){
+                convertTemp=(inputTempValue*1) + 273.15;
+                result.value=convertTemp.toFixed(2);
+            }
+            else if(ftoc){
+                convertTemp=5/9 *(inputTempValue -32);
+                result.value=convertTemp.toFixed(2);
+            }
+            else if(ftok){
+                convertTemp=5/9 *(inputTempValue -32) + 273.15;
+                result.value=convertTemp.toFixed(2);
+            }
+            else if(ktoc){
+                convertTemp=inputTempValue - 273.15;
+                result.value=convertTemp.toFixed(2);
+            }
+            else if(ktof){
+                convertTemp=9/5 *(inputTempValue -273.15) + 32;
+                result.value=convertTemp.toFixed(2);
+            }
+            else if(sameUnits){
+                result.value=inputTempValue;
+            }
+        }
+    </script>
+</body>
+</html>
